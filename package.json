@@ -1,0 +1,25 @@
+{
+  "name": "tyrellbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv/config index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chirp-stream": "^1.0.1",
+    "express": "^4.15.4",
+    "promise-while": "^1.0.1",
+    "simple-get-promise": "^1.0.2",
+    "thesaurus-com": "^1.1.3",
+    "twit": "^2.2.9",
+    "twitter": "^1.7.1",
+    "twitter-stream-api": "^0.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  }
+}
