@@ -1,26 +1,45 @@
 {
   "name": "tyrellbot",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0",
+  "description": "Turn negative tweets into positive ones",
   "main": "index.js",
   "scripts": {
     "start": "./app.sh"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlvince/tyrellbot.git"
+  },
+  "keywords": [
+    "bot",
+    "twitter",
+    "sentiment",
+    "peacehack",
+    "peacebots"
+  ],
+  "author": "Tom Vincent <git@tlvince.com> (https://tlvince.com)",
+  "engines": {
+    "npm": ">=5.4",
+    "node": ">=6.11"
+  },
+  "bugs": {
+    "url": "https://github.com/tlvince/tyrellbot/issues"
+  },
+  "homepage": "https://github.com/tlvince/tyrellbot#readme",
   "dependencies": {
-    "chirp-stream": "^1.0.1",
-    "express": "^4.15.4",
-    "forever": "^0.15.3",
-    "promise-while": "^1.0.1",
-    "simple-get-promise": "^1.0.2",
-    "thesaurus-com": "^1.1.3",
-    "twit": "^2.2.9",
-    "twitter": "^1.7.1",
-    "twitter-stream-api": "^0.5.1"
+    "promise-while": "github:tlvince/promise-while#4cfd9da9272440f13265a5649bd09bb327564377",
+    "simple-get-promise": "1.0.2",
+    "thesaurus-com": "1.1.3",
+    "twit": "2.2.9"
   },
   "devDependencies": {
-    "dotenv": "^4.0.0"
-  }
+    "dotenv": "4.0.0",
+    "standard": "10.0.3"
+  },
+  "files": [
+    "lib",
+    "app.sh",
+    "index.js"
+  ],
+  "license": "MIT"
 }
