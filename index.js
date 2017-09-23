@@ -30,6 +30,10 @@ const combine = parts => parts.tweets.documents.reduce((index, doc) => {
     return index
   }
 
+  if (doc.text.indexOf('@') !== -1) {
+    return
+  }
+
   return index.concat({
     tweet: doc.text,
     isPositive,
@@ -68,9 +72,16 @@ const goodTimes = tweets => tweets.reduce((str, tweet) => {
 
 PromiseWhile(condition, next)
   .then(() => {
-    const res = goodTimes(tweets)
-    const ok = res + ' #peaceday'
-    console.log('tweeting', ok)
-    return tweet(ok)
+    console.log('searching for positivity')
+    try {
+      console.log(tweets)
+      const res = goodTimes(tweets)
+      const ok = res + ' #peaceday'
+      console.log('tweeting', ok)
+      return tweet(ok)
+    } catch (e) {
+      process.exit()
+    }
   })
   .then(() => process.exit())
+  .catch(() => process.exit())

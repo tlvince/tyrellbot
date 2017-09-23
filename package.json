@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config index.js"
+    "start": "./app.sh"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,7 @@
   "dependencies": {
     "chirp-stream": "^1.0.1",
     "express": "^4.15.4",
+    "forever": "^0.15.3",
     "promise-while": "^1.0.1",
     "simple-get-promise": "^1.0.2",
     "thesaurus-com": "^1.1.3",
