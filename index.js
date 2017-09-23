@@ -31,7 +31,7 @@ const combine = parts => parts.tweets.documents.reduce((index, doc) => {
   }
 
   if (doc.text.indexOf('@') !== -1) {
-    return
+    return index
   }
 
   return index.concat({
